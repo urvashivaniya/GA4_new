@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS4</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgba(128, 128, 128, 0.267);
+
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.774);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        section{
+
+            padding: 30px;
+            text-align:center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        div {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/home.html">Home</a>
+            <a href="statement_1.html">Task 1</a>
+            <a href="/statement_2.html">Task 2</a>
+            <a href="/statement_3.html">Task 3</a>
+            <a href="/statement_4.html">Task 4</a>
+            <a href="/statement_5.html">Task 5</a>
+            <a href="/statement_6.html">Task 6</a>
+            <a href="#">E-Commerce</a>
+            <a href="#">Contact us</a>
+        </nav>
+    </header>
+    
+    <section>
+        <h3 style="color: black;font-size: 30px;">Problem Statement 4:</h3>
+        <p style="color: black;">Create one button namely "Play" and on click of that button any youtube video shold be open in iframe</p>
+        
+    </section>
+
+    <div>
+        <h4 style="font-size: 30px;"> Click the button to play video</h4>
+        <button id="btn">Play</button>
+    </div>
+
+    <div id="video" style="margin: 50px;">
+
+    </div>
+     
+    <script>
+        let elem = document.getElementById('btn');
+            let video = document.getElementById('video');
+            elem.addEventListener('click', function(){
+                
+                let iframe = document.createElement('iframe');
+                iframe.setAttribute('src', 'https://www.youtube.com/embed/tO-b66gfQdY?t=9');
+                iframe.setAttribute('height', '315');
+                iframe.setAttribute('width', '560');
+                iframe.setAttribute('frameborder', '0');
+                iframe.setAttribute('allowfullscreen', 'true');
+
+                video.appendChild(iframe);
+            })
+    </script>
+
+
+</body>
+
+</html>

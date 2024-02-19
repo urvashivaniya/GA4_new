@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgba(128, 128, 128, 0.267);
+
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.774);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        section{
+
+            padding: 30px;
+            text-align:center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        div {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/home.html">Home</a>
+            <a href="statement_1.html">Task 1</a>
+            <a href="/statement_2.html">Task 2</a>
+            <a href="statement_3.html">Task 3</a>
+            <a href="/statement_4.html">Task 4</a>
+            <a href="/statement_5.html">Task 5</a>
+            <a href="statement_6.html">Task 6</a>
+            <a href="#">E-Commerce</a>
+            <a href="#">Contact us</a>
+        </nav>
+    </header>
+    
+    <section>
+        <h3 style="color: black;font-size: 30px;">Problem Statement 1:</h3>
+        <p style="color: black;">Create one web page and add one heading with " Welcome To Tatvic!!" The Color of this heading should be BLACK. Just below that add one button with "Click Me" as button name.Now when we click on that button the heading text color should be change to RED.</p>
+        
+    </section>
+    <div>
+        <h4 id="head" style="text-align: center; font-size: 50px;">Welcome to tatvic</h4>
+        <button id="btn" onclick="changecolor()">click me</button>
+    </div>
+     
+    <script>
+        function changecolor(){
+                document.getElementById('head').style.color = 'red';
+            }
+    </script>
+
+
+</body>
+
+</html>

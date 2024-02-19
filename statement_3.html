@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgba(128, 128, 128, 0.267);
+
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.774);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        section{
+
+            padding: 30px;
+            text-align:center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        div {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/home.html">Home</a>
+            <a href="/statement_1.html">Task 1</a>
+            <a href="/statement_2.html">Task 2</a>
+            <a href="/statement_3.html">Task 3</a>
+            <a href="statement_4.html">Task 4</a>
+            <a href="/statement_5.html">Task 5</a>
+            <a href="/statement_6.html">Task 6</a>
+            <a href="#">E-Commerce</a>
+            <a href="#">Contact us</a>
+        </nav>
+    </header>
+    
+    <section>
+        <h3 style="color: black;font-size: 30px;">Problem Statement 3:</h3>
+        <p style="color: black;">Create one form with two field name and mobile number. Add submit button.On submit button click we need to add one more heading just below the submit button with " Submit Successfully" as a message.</p>
+        
+    </section>
+    <div>
+        <form id="frm">
+            <label for="name">Name</label>
+            <input type="text" name="name" required>
+
+            <br>
+
+            <label for="mobile">Mobile Number</label>
+            <input type="text" name="mobile" required pattern="[0-9]{10}">
+
+            <br>
+
+            <button id="btn" type="submit">Submit</button>
+
+        </form>
+    </div>
+    <div id="display" style="display: none;">
+        <h3 style="text-align: center; font-size: 50px; color: darkred;">"Submitted Successfully"</h3>
+    </div>
+     
+    <script>
+        document.getElementById('frm').addEventListener('submit', function(){
+         event.preventDefault();
+
+        document.getElementById('display').style.display = 'block';
+        })
+
+    </script>
+
+
+</body>
+
+</html>

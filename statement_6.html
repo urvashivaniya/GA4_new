@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: rgba(128, 128, 128, 0.267);
+
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.774);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        section{
+
+            padding: 30px;
+            text-align:center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        div {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/home.html">Home</a>
+            <a href="statement_1.html">Task 1</a>
+            <a href="/statement_2.html">Task 2</a>
+            <a href="statement_3.html">Task 3</a>
+            <a href="/statement_4.html">Task 4</a>
+            <a href="/statement_5.html">Task 5</a>
+            <a href="/statement_6.html">Task 6</a>
+            <a href="#">E-Commerce</a>
+            <a href="#">Contact us</a>
+        </nav>
+    </header>
+    
+    <section>
+        <h3 style="color: black;font-size: 30px;">Problem Statement 6:</h3>
+        <p style="color: black;">Create one button and on click of that button one cookie shold be created namely " Button Clicked" and value will be "Yes" like this (http://prntscr.com/257of6z)</p>
+        
+    </section>
+    <div>
+        <button id="clickButton">Click me!</button>
+
+<script>
+    document.getElementById('clickButton').addEventListener('click', function() {
+        document.cookie = 'ButtonClicked=Yes';
+
+        if (document.cookie.indexOf('ButtonClicked=Yes') !== -1) {
+            console.log(document.cookie.indexOf('ButtonClicked=Yes'));
+            alert('Cookie set successfully!');
+        } else {
+            alert('Failed to set cookie.');
+        }
+    });
+</script>
+    </div>
+
+
+</body>
+
+</html>
