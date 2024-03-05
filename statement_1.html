@@ -87,6 +87,15 @@
                 document.getElementById('head').style.color = 'red';
             }
     </script>
+    <script>
+  document.getElementById('btn').addEventListener('click', function() {
+    gtag('event', 'click', {
+      'event_category': 'Button Click',
+      'event_label': 'click me'
+    });
+  });
+</script>
+
 
 
 </body>
