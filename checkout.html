@@ -416,8 +416,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/checkout.js"></script>
 <script>
+    localStorage.getItem("click_product_no");
     document.querySelector('.button.order_button').addEventListener('click', function () {
-        localStorage.getItem("click_product_no")
         gtag('event', 'purchase', {
             currency: 'USD',
             value: 116.47,
