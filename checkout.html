@@ -415,5 +415,42 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/checkout.js"></script>
+<script>
+    document.querySelector('.button.order_button').addEventListener('click', function () {
+        localStorage.getItem("click_product_no")
+        gtag('event', 'purchase', {
+            currency: 'USD',
+            value: 116.47,
+            tax: 7.18,
+            shipping: 10.00,
+            affiliation: 'My Parka Store',
+            transaction_id: 'p115-20202000',
+            coupon: 'free_back_rub',
+            items: [{
+                item_name: 'IPhone_' + ind,
+                item_id: 'ab222_' + ind,
+                price: '$670_' + ind,
+                item_brand: 'Apple_' + ind,
+                item_category: 'Mobile_' + ind,
+                index: ind,
+                quantity: '1_' + ind,
+                affiliation: "Google Merchandise Store_" + ind,
+                coupon: "SUMMER_FUN_" + ind,
+                discount: 2.22,
+                item_category2: "phone_1_" + ind,
+                item_category3: "phone_2_" + ind,
+                item_category4: "phone_3_" + ind,
+                item_category5: "phone_4_" + ind,
+                item_list_id: "related_products_" + ind,
+                item_list_name: "Related Products_" + ind,
+                item_variant: "green_" + ind,
+                location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo_" + ind,
+
+            }]
+
+        })
+    })
+
+</script>
 </body>
 </html>
