@@ -2,31 +2,55 @@
 <html lang="en">
 <head>
 <script>
-    let indx = localStorage.getItem("click_product_no")
-    gtag('event', 'view_item', {
+    let cook = document.cookie;
+
+function getCookieValue(cookieString, cookieName) {
+    var cookies = cookieString.split(';');
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+
+        if (cookie.indexOf(cookieName + '=') === 0) {
+            return cookie.substring(cookieName.length + 1);
+        }
+    }
+    
+    // Move the return statement outside of the for loop
+    return null;
+}
+
+let inx = getCookieValue(cook, 'select_product');
+
+console.log(inx);
+
+document.querySelector('.button.cart_button').addEventListener('click', function () {
+    gtag('event', 'add_to_cart', {
         item_list_id: "related_products",
         item_list_name: "Related products",
         items: [{
-            item_name: 'IPhone_' + ind,
-            item_id: 'ab222_' + ind,
-            price: '$670_' + ind,
-            item_brand: 'Apple_' + ind,
-            item_category: 'Mobile_' + ind,
-            index: ind,
-            quantity: '1_' + ind,
-            affiliation: "Google Merchandise Store_" + ind,
-            coupon: "SUMMER_FUN_" + ind,
+            item_name: 'IPhone_' + inx,
+            item_id: 'ab222_' + inx,
+            price: '$670_' + inx,
+            item_brand: 'Apple_' + inx,
+            item_category: 'Mobile_' + inx,
+            index: inx,
+            quantity: '1_' + inx,
+            affiliation: "Google Merchandise Store_" + inx,
+            coupon: "SUMMER_FUN_" + inx,
             discount: 2.22,
-            item_category2: "phone_1_" + ind,
-            item_category3: "phone_2_" + ind,
-            item_category4: "phone_3_" + ind,
-            item_category5: "phone_4_" + ind,
-            item_list_id: "related_products_" + ind,
-            item_list_name: "Related Products_" + ind,
-            item_variant: "green_" + ind,
-            location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo_" + ind,
+            item_category2: "phone_1_" + inx,
+            item_category3: "phone_2_" + inx,
+            item_category4: "phone_3_" + inx,
+            item_category5: "phone_4_" + inx,
+            item_list_id: "related_products_" + inx,
+            item_list_name: "Related Products_" + inx,
+            item_variant: "green_" + inx,
+            location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo_" + inx,
 
         }]
+    });
+});
+
 
     })
 
