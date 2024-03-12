@@ -526,13 +526,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/custom.js"></script>
 <script>
-	let element = document.querySelectorAll('.product');
-    for (let i = 0; i < element.length; i++) {
-        element[i].addEventListener('click', (event) => {
-            let elem = event.target;
-            let ind = i + 1;
-            localStorage.setItem("click_product_no", ind);
-            gtag('event', 'select_item', {
+let product = document.querySelectorAll('.product');
+for (let i = 0; i < product.length; i++) {
+    product[i].addEventListener('click', function (){
+        document.cookie = `select_product=${i}`;
+    })
+    
+}
+let cook = document.cookie;
+
+function getCookieValue(cookieString, cookieName) {
+    var cookies = cookieString.split(';');
+
+    for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+
+        if (cookie.indexOf(cookieName + '=') === 0) {
+            return cookie.substring(cookieName.length + 1);
+        }
+    }
+ return null;
+let ind = getCookieValue(cook, 'select_product');
+console.log(ind);
+gtag('event', 'select_item', {
                 item_list_id: "related_products",
                 item_list_name: "Related products",
                 items: [{
@@ -558,8 +574,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 }]
 
             })
-        })
-    }
+
+
+}
 </script>
 </body>
 </html>
